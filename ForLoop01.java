@@ -1,88 +1,159 @@
-package day08loops;
+package day09loops;
 
 public class ForLoop01 {
 
 	public static void main(String[] args) {
+
+		//Type code to print all unique characters on the console from a given String
+				// samame ==> se
 		
-		//Type code to print "Hello!" 10 times on the console
-		
-		//1.way: Not recommended
-		System.out.println("Hello!");
-		System.out.println("Hello!");
-		System.out.println("Hello!");
-		System.out.println("Hello!");	
-		
-		System.out.println();
-		
-		//2.Way: For repeated tasks you can use loops i)for-loop ii)while-loop iii)do-while-loop iv)for-each-loop
-		for(int i = 1;      i <= 4;          i++) {
-			System.out.println("Hello!");	
+	String str="ali veli can";
+	for(int i=0;i<str.length();i++) {
+		char c=str.charAt(i);
+		if(str.indexOf(c)==str.lastIndexOf(c)) {
+			System.out.print(c);
+		}
 		}
 		
-		System.out.println();
+		//		
+//		String s1="Annar Maria";
+//	
+//	for(int i=0; i<s1.length(); i++) {
+//		
+//		char c=s1.charAt(i);
+//		
+//		if(s1.indexOf(c)==s1.lastIndexOf(c)) {
+//			System.out.print(c);
+//		}
+//	}
+//System.out.println();
+//// 2) Type code to print a String in reverse order after removing spaces	
+//		
+	System.out.println();
+	
+	String str1="read it from back";
+	String reverse="";
+	for (int i=str1.length()-1;i>-1;i--) {
+		char c=str1.charAt(i);
+	
+		reverse = reverse+c;
+	}
+		System.out.print(reverse);
 		
-		//Type all integers from 11 to 44 in the same line with a space between consecutive integers
-		for(int i = 11; i < 14; i++) {			
-			System.out.print(i + " ");			
+//		String s2="Ali Can";//"naCilA"
+//		String reversed="";
+//		
+//		for(int i=s2.length()-1; i>=0; i--) {
+//			String c=s2.substring(i, i+1); 
+//			
+//			if(c.equals(" ")) {
+//				s2=s2.replace(" ", "");
+//				
+//			}
+//			else {
+//			reversed=reversed+c;
+//			}
+//		}
+//		System.out.print(reversed);
+//		
+//		System.out.println();
+//// 3) Type code to find the sum of the integers from 12 to 231
+System.out.println();
+
+		int sumin=0;
+		for(int i=0;i<232;i++) {
+			sumin= sumin+i;
 		}
+	System.out.print(sumin);	
+//		int sum=0;
+//		
+//		for(int i=2;i<8;i++){
+//			sum=sum+i;
+//		}
+//		System.out.println(sum);
+System.out.println();
+//	//	3) Type code to find the multiplication of the integers from 12 to 231	
+//		
+	int mult=1;
+	for(int i=12;i<26;i++) {
+		mult=mult*i;
+	}
+	System.out.print(mult);
+	
+	
+	
+	System.out.println();
+	
+	
+	
+int mul=1;
 		
-		System.out.println();
-		
-		//Type all even integers from 11 to 120 in the same line with a space between consecutive integers
-		
-		//1.Way: Recommended
-		for(int i = 11; i < 121; i++) {
-			if(i%2==0) {				
-				System.out.print(i + " ");				
-			}			
+		for(int i=12;i<22;i++){
+			mul=mul*i;
 		}
-		
-		System.out.println();
-		
-		//2.Way:
-		for(int i = 12; i < 121; i = i + 2) {
-			System.out.print(i + " ");
-		}
-		
-		System.out.println();
-		
-		//Type all odd integers from 120 to 11 in the same line with a space between consecutive integers
-		for(int i = 120; i > 10; i--) {			
-			if(i%2!=0) {
-				System.out.print(i + " ");
+		System.out.println(mul);
+//		
+////5) Type code to check if a given String is Palindrome or not.
+		String strP="anna";
+		String reversedd="";
+		for(int i=strP.length()-1;i>=0;i--) {
+			char c=strP.charAt(i);
+			reversedd=reversedd+c;
+			if(strP==reversedd) {
+				System.out.println(reversedd);
 			}
 		}
 		
-		System.out.println();
 		
-		//Type all integers which are divisible by 4 and divisible by 6 from 120 to 11 in the same line with a space between consecutive integers
-		for(int i = 120; i  > 10; i--) {			
-			if(i%4==0 && i%6==0) {
-				System.out.print(i+ " ");
-			}			
-		}
 		
-		System.out.println();
 		
-		//Convert "Java" to "J*a*v*a*"		
-		String s = "samames";		
-		//If instead of s.length() you use just 4, it means your loop works just for four characters. 
-		//We do mot want it, because our code should work for every kind of Strings.
-		//If you use specific values in your code it is called "Hard Coding" and "Hard Coding" is not acceptable
-		for(int i=0; i<s.length(); i++) {			
-			System.out.print(s.charAt(i) + "*");				
-		}
-		System.out.println();
-		//Type code to print all unique characters on the console from a given String
-		// samame ==> se
-
-		for(int i = 0; i<s.length(); i++) {
-			
-			if(s.indexOf(s.charAt(i)) == s.lastIndexOf(s.charAt(i))) {
-				System.out.print(s.charAt(i));
-		}}
 		
-			
+		
+//// String: anna  Reversed String: anna
+//// Integer: 12321 Reversed Integer: 12321
+//		
+//		String s3="123215";
+//		String reversed1="";
+//		
+//		for(int i=s3.length()-1;i>=0;i--) {
+//			reversed1=reversed1+s3.charAt(i);
+//			
+//		}
+//		System.out.println(reversed1);
+//		
+//		if(s3.equals(reversed1)) {
+//			System.out.println(s3+" is Palindrome");
+//		}else {
+//			System.out.println(s3+" is not polidrome");
+//		}
+//		
+////6) Type code to find the sum of the digits of an integer.
+//		int sumOfDigits=0;
+//		
+//		for(int n=1234565648;n>0;n=n/10) {
+//			
+//			sumOfDigits=sumOfDigits+n%10;
+//						
+//		}
+//		System.out.println(sumOfDigits);
+//	//7) Type code to find the sum of the unique digits of an integer.
+//		
+//		String in="2523";
+//		int sum3=0;
+//		
+//		for(int i=0;i<in.length();i++) {
+//			char ci=in.charAt(i);
+//			
+//			if(in.indexOf(ci)==in.lastIndexOf(ci)) {
+//				String cstr=""+ci;
+//				sum3= sum3+Integer.valueOf(cstr);
+//			}
+//				
+//			System.out.println(sum3);
+//		}
+//		
+//		
 		
 	}
+
 }
