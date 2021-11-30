@@ -1,28 +1,53 @@
-package day15arrays;
+package day16arraysforeachloop;
 
 import java.util.Arrays;
-import java.util.Comparator;
+import java.util.Scanner;
 
 public class Arrays04 {
 
 	public static void main(String[] args) {
-//Sort the String array elements in ascending order according to their lengths.
+		//Type code to find the number of words in a String
 		
-		String srr[]= {"Jacksonville", "Miami","Keywe","Tampa", "Virginia"};
-		System.out.println("Before: "+Arrays.toString(srr));
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter a sentence");
+		String s=scan.nextLine();
 		
-		//Sort in ascending by using number of characters
-//		Arrays.sort(srr, Comparator.comparingInt(String::length));//Go class, find length, use it
-//		System.out.println("After: "+Arrays.toString(srr));
+		String words[]=s.split(" ");
+		System.out.println(Arrays.toString(words));
+		System.out.println(words.length);
 		
-		//Sort in descending by using number of characters#
-//		Arrays.sort(srr, Comparator.comparingInt(String::length).reversed());
-//		System.out.println("After: "+Arrays.toString(srr));
+		int counter=0;
+		for(int i=0;i<words.length;i++) {
+			if(words[i].startsWith("a")) {
+				counter++;
+			}
+		}
+		if(counter==0) {
+			System.out.println("no a");
+		}else {
+			System.out.println(counter+" a");
+		}
+	
+		
+//		Scanner scan=new Scanner(System.in);
+//		System.out.println("Enter String..");
+//		String s=scan.nextLine();
+////How to split a String by using any character
+//		String words[]=s.split(" ");
+//		System.out.println(Arrays.toString(words));//[Ali, Can, went, to, school]
+//		System.out.println("The number of words is: "+words.length);
+//	
+//	//Count how many words starts with "a"
+//		int counter=0;
+//		for(int i=0; i<words.length;i++) {
+//			if(words[i].startsWith("a")) {
+//				counter++;
+//			}
+//		}
+//		
+//		System.out.println("The number of words start with a: "+counter);
 
-//Sorting in descending order, if there is multiple elements in same length put them in alphabetic order
-		Arrays.sort(srr, Comparator.comparingInt(String::length).reversed().thenComparing(Comparator.naturalOrder()));
-		System.out.println("After: "+Arrays.toString(srr));
-//		Note:Natural order means i)alphabetic order for strings ii)Ascending order for numbers.
+		
 	}
 
 }

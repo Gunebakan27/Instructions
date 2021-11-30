@@ -1,68 +1,58 @@
-package day15arrays;
+package day16arraysforeachloop;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Arrays02 {
 
+	//Check if array elements are sorted or not
+	
 	public static void main(String[] args) {
 
-//Get the array elements from user and create an array
-		Scanner scan=new Scanner(System.in);
-		System.out.println("Enter the number of elements..");
-		int length=scan.nextInt();
-		String arr[]=new String[length];
+		String s1[]={"A","T","C"};
+		System.out.println("Before: "+Arrays.toString(s1));
 		
-		for(int i=0;i<length;i++) {
-			System.out.println("Enter an element..");
-			arr[i]=scan.next();			
-		}
-		System.out.println(Arrays.toString(arr));
-	
-//		System.out.println("Enter the length of the array..");
-//		int length=scan.nextInt();
-//		
-//		String sArr[]=new String[length];
-//		
-//		for(int i=0;i<length; i++) {
-//			System.out.println("Enter " + (i+1)+". element");
-//			sArr[i]=scan.next();			
-//		}
-//		System.out.println(Arrays.toString(sArr));
-////Make 2nd element 1st, 1st element last, last element 2nd.
-////[Ali, Veli, Samil]==> [Veli, Samil, Ali]
-		String arrNew[]=new String[length];
-		arrNew[0]=arr[1];
-		arrNew[length-1]=arr[0];
-		arrNew[1]=arr[length-1];
+		String s2[]=Arrays.copyOf(s1, s1.length);
+		System.out.println("Before sorting s2: " +Arrays.toString(s2));
 		
 	
-		for(int i=0;i<length;i++) {
-			
-			if(i==0||i==1||i==length-1) {
-				continue;
-			}
-			arrNew[i]=arr[i];
+		
+		Arrays.sort(s1);
+		System.out.println("After sorting: "+Arrays.toString(s1));
+		
+		Arrays.sort(s2);
+		System.out.println("After sorting s2: "+Arrays.toString(s2));
+		
+		if(Arrays.equals(s1, s2)) {
+			System.out.println("They are sorted");
+		}else {
+			System.out.println("They are not sorted");
 		}
+	
+//		//If you use "String s2[]=s1" instead of using copyOf() method, every time you will get Array elements are sorted message,
+		//because when you sort s1, s2 will be sorted as well. When you do direct assignment, Java does not create a new container
+		//to save memory. But copyOf() method makes java create a new container even the arrays are same.
 		
-		System.out.println(Arrays.toString(arrNew));
-		
-//		String sArrNew[]=new String[length];
-//		sArrNew[0]=sArr[1];
-//		sArrNew[length-1]=sArr[0];
-//		sArrNew[1]=sArr[length-1];
+//		String s2[]=Arrays.copyOf(s1, s1.length);
+////		String s2[]=s1;
+//		System.out.println("Before:"+Arrays.toString(s2));
+//
+//		Arrays.sort(s1);
 //		
-//		for(int i=0;i<length;i++) {
-//			
-//			if(i==0||i==1||i==(length-1)) {
-//				continue;
-//			}
-//			sArrNew[i]=sArr[i];
+//		System.out.println("After:"+Arrays.toString(s1));
+//		System.out.println("After:"+Arrays.toString(s2));
+//
+//		
+//		if(Arrays.equals(s1, s2)) {
+//			System.out.println("They are soreted");
+//		}else {
+//			System.out.println("They are not sorted");
 //		}
+//		
 //	
-//		System.out.println(Arrays.toString(sArrNew));
-		
-		
+//		
+
+	
+	
 		
 		
 	}

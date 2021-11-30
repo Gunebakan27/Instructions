@@ -1,45 +1,75 @@
-package day15arrays;
+package day16arraysforeachloop;
 
 import java.util.Arrays;
 
 public class Arrays01 {
 
 	public static void main(String[] args) {
-
-	//create a String Array and print the elements in alphabetical order on the console in different lines
+//Check if 2 arrays are same or not
+//If 2 arrays are same; same elements must be in the same index.
 		
-//		String sArr[]=new String[5];
-//		System.out.println(Arrays.toString(sArr));
-//		sArr[0]="Ali";
-//		sArr[1]="Bekir";
-//		sArr[2]="Zehra";
-//		sArr[3]="Yasin";
-//		sArr[4]="Mary";
+		int arr1[]= {1,2,4};
+		int arr2[]= {1,2,3};
 		
-		String arr[]= {"Ali","Veli","Deli"};
-		Arrays.sort(arr);
-		System.out.println(Arrays.toString(arr));
-		
-		for(int i=0;i<arr.length;i++) {
-			System.out.println(arr[i]);
+		int counter=0;
+		if(arr1.length==arr2.length) {
+		for(int i=0;i<arr1.length;i++) {
+			if(arr1[i]!=arr2[i]) {
+				counter++;
+				break;
+			}
+				
+			}
+		if(counter==1) {
+			System.out.println("not same");
+		}else {
+			System.out.println("Same");
+		}
+		}else {
+			System.out.println("not same");
 		}
 		
-//		String sArr[]= {"Ali", "Yasin", "Bekir", "Mary", "Zehra"};
-//		System.out.println(Arrays.toString(sArr));
-////How to sort Array elements
-//		Arrays.sort(sArr);
-//		System.out.println(Arrays.toString(sArr));
-//		
-//		for(int i=0;i<sArr.length;i++) {
-//			System.out.println(sArr[i]);
-//		}
-//		for(int i=sArr.length-1;i>=0;i--) {
-//			System.out.println(sArr[i]);
-//		}
-
-
-
+		boolean isSame=Arrays.equals(arr1, arr2);
+		if(isSame) {
+			System.out.println("Same");
+		}else {System.out.println("not same");
 		
-	}
+		}
+	
+		
+//		
+//		int arr1[]= {5,12,32,11};
+//		int arr2[]= {5,12,32,11};
+//	//1.Way: 	
+//		int counter=0;
+//		
+//		if(arr1.length==arr2.length) {
+//					
+//		for(int i=0;i<arr1.length;i++) {
+//			
+//			if(arr1[i]!=arr2[i]) {
+//				counter++;
+//				break;
+//			}
+//		}
+//		if (counter==1) {
+//			System.out.println("Arrays are not same");
+//		}else{System.out.println("Arrays are same");}
+//		
+//	}else {
+//		System.out.println("Arrays are not same");
+//	}
+//		
+//	//2.Way: There is a build in method in Arrays Class to check if the arrays are same or not
+//		boolean isSame=Arrays.equals(arr1, arr2);
+//		if(isSame)
+//	{System.out.println("Arrays are same");
+//		
+//	}else {
+//		System.out.println("Arrays are not same");
+//	}
+		
+		
+		}
 
 }
