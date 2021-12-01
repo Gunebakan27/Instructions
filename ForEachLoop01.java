@@ -1,79 +1,70 @@
-package day16arraysforeachloop;
+package day17foreachloopmultidimensionalarray;
+
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class ForEachLoop01 {
 
 	public static void main(String[] args) {
 
-		//for-each-loop is the best to use
-		//for-each-loop can be used with the containers which have multiple elements
-		//so for-each-loop can be used with arrays
+		//1.Ex: Find the vowels in a String by using arrays
+		String s="Learn Java, earn money.";
 		
-		//Get the total number of characters in the elements
-		String s[]= {"Ali Can", "Veli Han", "Mary Star"};
 		
-		int sum=0;
-		for(int i=0;i<s.length;i++) {
-			sum=sum+s[i].length();
-		}
-		System.out.println(sum);
+		String[] words=s.split(" ");
+		System.out.println(Arrays.toString(words));
 		
-//		//Do it by using for-loop
-//		int sum=0;
-//		for(int i=0;i<s.length;i++) {
-//			sum=sum+s[i].length();
-//			
-//		}
-//		System.out.println(sum);
-//		//Do it by using for-each-loop
-		int sum2=0;
-		for(String w:s) {
-			sum2=sum2+w.length();
-		}
-			System.out.println(sum2);
+		System.out.println(words.length);
 		
-//		int sum2=0;
-//		for(String w : s) {
-//			sum2=sum2+w.length();
-//		}
-//	System.out.println(sum2);
-//	
-//	//Print all elements in the given array. If the elements has more than 6 characters
-	String t[]= {"Miami", "United States", "Jacksinwille", "Samsun"};
-			
-	for(String w:t) {
-		if(w.length()>6) {
-			System.out.println(w);
-		}
-	}
-			
-//	for(String w:t) {
-//		if(w.length()>6) {
-//			System.out.println(w);
-//		}
-		//Print the common elements for 2 arrays
 		
-		int arr1[]= {11,21,33};
-		int arr2[]= {33,34,11,22,25};
 		
-		for(int w:arr1) {
-			for(int x:arr2) {
-				if(w==x) {
-					System.out.print(w+" ");
-				}
-			}
-		}
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		String s="Learn Java, earn money.";
+//		String chars[]=s.split("");
+//		System.out.println(Arrays.toString(chars));
 //		
-//		for(int wx:arr1) {
-//			for(int wy:arr2) {
-//				if(wx==wy) {
-//					System.out.print(wx+" ");
-//				}
+//		for(String w:chars) {
+//			if(!(w.equalsIgnoreCase("a")||w.equalsIgnoreCase("a")||w.equalsIgnoreCase("e")||w.equalsIgnoreCase("i")||
+//					w.equalsIgnoreCase("o")||w.equalsIgnoreCase("u"))) {
+//				System.out.print(w+" ");
 //			}
 //		}
-		
-	}
-	
+//		System.out.println();
+//		//2.Ex: Print the words ending with "n"
+//		String t="Learn Java, earn! money.";
+//		t=t.replaceAll("\\p{Punct}", "");
+//		System.out.println(t);
+//		
+//		String n[]=t.split(" ");
+//		
+//		for(String w:n) {
+//			if(w.endsWith("a")) {
+//				System.out.print(w+" ");
+//			}
+//		}
+//		System.out.println();
+////3. Ex: Find the sum of the digits of an integer given by user by using arrays
+//		Scanner scan=new Scanner(System.in);
+//		System.out.println("Enter an integer..");
+//		String num=scan.next();
+//		String digits[]=num.split("");
+//		System.out.println(Arrays.toString(digits));
+//		int sum=0;
+//		for(String w:digits) {
+//			sum=sum+Integer.valueOf(w);
+//		}
+//		System.out.println(sum);
 	}
 
-
+}
