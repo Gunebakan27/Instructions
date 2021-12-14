@@ -1,34 +1,39 @@
-package day22inheritance;
+package day24abstractclass;
 /*
- * 1)Private Class members can not be used by child classes
- * 2)"Default Class" members can be used by child classes,
- * if the child class is in the same package with the parent class
- * 3)"ProtectedClass" members can be used by child classes,
- * even it is in another package.
- * 4)"Public Class" members can be used by child classes.
- * 5)To use "Static" class members, no need to create object, use them by class name.
- * 6)super() is for calling parent constructor.
- * If you dont type super() inside the constructor, java will put it as default but it will be invisible
- * 7)super() must be in the first line inside the constructor.
- * 8)"this()" and "super()" must be in the first line inside a constructor so they can not be used at the same time in a constructor.
- * 9)A child class cannot have multiple parents
+ * 1)Sometimes we need methods without body(Abstract methods). because sometimes we do not use the body of some methods any time.
+ * 
+ * 2)To create an "abstract method":
+ * i)Do not put method body
+ * ii)Use "abstract" keyword between access modifier and return type.
+ * iii)"abstract methods" can be created just in "abstract classes"
+ * Note: To make a class abstract, use "abstract" keyword before "class" keyword
+ * 
+ * 3)Abstract classes can have both "abstract methods" and "concrete methods"
+ * 
+ * 4)Abstract MEthods MUST be overridden by all CONCRETE child classes. But it is optional for concrete methods.
+ * If you want to make a functionality must for child classes, use abstract method for the functionality.
+ * 
+ * 5)Abstract keyword and method body cannot be used at the same time in a method.
+ * 
+ * 6)An abstract class can have "abstract child class"
+ * 
+ * 7)It is not MUST for "abstract child class" to override "abstract methods" from parents class..
+ * 
+ * 8)If any abstract method is overridden by any parent class, it will not be MUST for child classes.
+ * 
+ * 9)abstract methods cannot be "final" because "abstract methods" will have newly updated body in every child class but "final body" means no update in body.
+ * 
+ * 10)Abstract method cannot be "private" because we create "abstract method" just for child classes usage.
+ * but if you make "abstract method" private child classes cannot access to it.
+ * 
  */
-public class Animal {
-	public Animal(String name) {
-		System.out.println("String Animal constructor");
-	}
-	public Animal() {
-		
-		System.out.println("No Parameter Animal consructor..");
-	}
-	int age;
+public abstract class Animal {
 	
-	public void eat() {
-		System.out.println("They eat..");
-	}
+	public abstract void eat();
 	public void drink() {
-		System.out.println("They drink..");
+		System.out.println("Animals drink..");
 	}
+	
 
-
+	
 }

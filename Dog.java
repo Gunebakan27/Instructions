@@ -1,18 +1,12 @@
-package day22inheritance;
+package day24abstractclass;
 
-public class Dog extends Mammal {
-	public Dog(int age) {
-		System.out.println("Integer constructor");
-	}
-		
-		public Dog() {
-	
-		super(true);
-		System.out.println("Boolean Dog constructor..");
+public class Dog extends Animal {
+
+	@Override
+	public void eat() {
+
+		System.out.println("Dogs eat..");
 	}
 	
-	public void bark() {
-		System.out.println("Dogs bark..");
-	}
 
 }
