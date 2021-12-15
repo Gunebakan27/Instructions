@@ -1,23 +1,24 @@
-package day22inheritance;
+package day25interface;
 
 public class Runner {
 
 	public static void main(String[] args) {
-		Dog dog1=new Dog();
-		
-		System.out.println(dog1.age);
-		dog1.eat();
-		dog1.drink();
-		dog1.giveBirth();
-		dog1.feedWithMilk();
-		dog1.bark();
-		
-		Mammal mammal1=new Mammal();
-		
-		final int age=41;
-		
-		
+Car car1=new Car();
+car1.bacteriaKiller();
+car1.climateAc();
+car1.electronicAc();
+car1.havingHybridEngine();
 
+//When you use "default" keyword to create "concrete method" in an interface, you can call the method just by using "object name".
+car1.move();
+
+//When you use "static" keyword to create "concrete method" in an interface, you can call the method just by using "interface name".
+//By using object names, you cannot access to the method.
+Vehicle.staticMove();
+
+
+System.out.println(AirCondition.MAKE);
+System.out.println(HybridEngine.MAKE);
 	}
 
 }
